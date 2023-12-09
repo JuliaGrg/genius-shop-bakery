@@ -38,8 +38,11 @@
 
 
 /* Base */
-* {
+*,
+*::after,
+*::before{
   box-sizing: border-box;
+
 }
 
 body {
@@ -92,6 +95,10 @@ p {
   padding: 0 24px;
 }
 
+a {
+  display: inline-block;
+}
+
 
 /* Button */
 .button {
@@ -130,10 +137,10 @@ color: var(--color-brand-dark);
 }
 
 .header-menu {
-display: flex;
-gap: 64px;
-flex-grow: 1;
-justify-content: center;
+  display: flex;
+  gap: 64px;
+  flex-grow: 1;
+  justify-content: center;
 }
 
 .header-nav {
@@ -272,6 +279,28 @@ justify-content: center;
     -16px 16px 0 1px var(--color-secondary-dark);
 }
 
+.chefs-list {
+  display: flex;
+  gap: 40px 30px;
+}
+
+.chef-card {
+  display: flex;
+  gap: 30px;
+}
+
+.chefs-item {
+  flex-basis: calc(100% - 30px / 2);
+}
+
+.chef-text p {
+  margin-bottom: 24px;
+}
+
+.chef-text p:last-child {
+  margin-bottom: 0;
+}
+
 /* Formats section */
 .formats-item {
   flex-basis: calc((100% - 40px) / 3);
@@ -306,6 +335,11 @@ justify-content: center;
   font-weight: 300;
 }
  
+.formats-container {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
 
 /* Caurousel */
 .caurousel-button {
@@ -318,6 +352,7 @@ justify-content: center;
   display: flex;
   align-items: center;
   justify-content: center;cursor: pointer;
+  flex-shrink: 0;
 }
 
 .caurousel-button:hover {
@@ -333,10 +368,24 @@ fill: var(--color-primary-light);
 
 
 /* Contact section */
+.contact-section {
+  padding-bottom: 96px;
+}
+
 .contact-title {
   margin-bottom: 16px;
 }
 
+.contact-container {
+  display: flex;
+  gap: 32px;
+}
+
+.contact-map {
+ flex-shrink: 0;
+ border: 0;
+ border-radius: 16px;
+}
 
 /* footer */
 .footer {
@@ -344,6 +393,42 @@ fill: var(--color-primary-light);
   background-image: url(images/footer-background.png);
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 32px 0;
+}
+
+.footer-container {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-nav,
+.footer-address {
+  flex-basis: 50%;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-logo {
+  flex-grow: 1;
+
+}
+
+.footer-menu {
+  flex-grow: 1;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 22px;
+  padding-top: 16px;
+}
+
+.address-list{
+  flex-grow: 1;
+}
+
+.address-info {
+  flex-grow: 1;
 }
 
 .address-link {
