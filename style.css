@@ -90,7 +90,7 @@ p {
 
 .container {
   width: 100%;
-  max-width: 1240px;
+  max-width: 1288px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -103,17 +103,17 @@ a {
 /* Button */
 .button {
   padding: 16px 32px;
-background-color: var(--color-brand-light);
-border: 2px solid var(--color-brand-light);
-border-radius: 8px;
-color: var(--color-primary-light);
-cursor: pointer;
-font-weight: 600;
+  background-color: var(--color-brand-light);
+  border: 2px solid var(--color-brand-light);
+  border-radius: 8px;
+  color: var(--color-primary-light);
+  cursor: pointer;
+  font-weight: 600;
 }
 
 .button:hover {
-background-color: transparent;
-color: var(--color-brand-dark);
+  background-color: transparent;
+  color: var(--color-brand-dark);
 }
 
 
@@ -127,13 +127,12 @@ color: var(--color-brand-dark);
 
 .link:hover {
   color: var(--color-brand-light);
-  
 }
 
 
 /* Header */
 .header {
-  padding-top: 32px;
+  background-color: lightgray;
 }
 
 .header-menu {
@@ -162,6 +161,7 @@ color: var(--color-brand-dark);
   padding:272px 0;
   background-image: url(images/hero-section-background.jpg);
   background-repeat: no-repeat;
+  background-position: center top;
   background-size: cover;
 }
 
@@ -205,6 +205,7 @@ color: var(--color-brand-dark);
 
 .section-title .accent {
   color: var(--color-brand-dark);
+
 }
 
 .section-title.centered {
@@ -216,6 +217,7 @@ color: var(--color-brand-dark);
 .traditions-container {
   display: flex;
   justify-content: space-between;
+  gap: 40px;
 }
 
 .traditions-content {
@@ -250,22 +252,26 @@ color: var(--color-brand-dark);
 
 /* Chefs section */
 .chefs-title {
-  margin: 0 auto 80px;
-  max-width: 520px;
+  position: relative;
+  margin: 0 auto 80px auto;
 }
 
-.chefs-title::before {
-  display: block;
-  width: 352px;
-  border: 2px solid var(--color-secondary-light);
-  content: '';
-}
-
+.chefs-title::before,
 .chefs-title::after {
   display: block;
   width: 352px;
   border: 2px solid var(--color-secondary-light);
   content: '';
+  position: absolute;
+  bottom: 24px;
+}
+
+.chefs-title::before {
+  left: 0px;
+}
+
+.chefs-title::after {
+  right: 0px;
 }
 
 .chef-title {
@@ -276,11 +282,12 @@ color: var(--color-brand-dark);
 .chef-photo {
   border-radius: 4px 4px 4px 200px;
   box-shadow: -16px 16px 0 0 var(--color-primary-light),
-    -16px 16px 0 1px var(--color-secondary-dark);
+    -16px 16px 0 2px var(--color-secondary-dark);
 }
 
 .chefs-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 40px 30px;
 }
 
@@ -290,7 +297,7 @@ color: var(--color-brand-dark);
 }
 
 .chefs-item {
-  flex-basis: calc(100% - 30px / 2);
+  flex-basis: calc((100% - 30px) / 2);
 }
 
 .chef-text p {
@@ -389,15 +396,40 @@ fill: var(--color-primary-light);
 
 /* footer */
 .footer {
-  background-color: #31261A;
+  background-color: var(--color-primary-dark);
   background-image: url(images/footer-background.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   padding: 32px 0;
+  position: relative;
+}
+
+.footer::before,
+.footer::after {
+  position: absolute;
+  background-repeat: no-repeat;
+  bottom: 0;
+  content: '';
+} 
+
+.footer::before {
+  background-image: url(images/decor-bread-left.png);
+  width: 180px;
+  height: 120px;
+  left: 0;
+}
+
+.footer::after {
+  background-image: url(images/decor-bread-right.png);
+  width: 380px;
+  height: 190px;
+  right: 0;
 }
 
 .footer-container {
   display: flex;
+  flex-basis: 50%;
   gap: 20px;
 }
 
@@ -408,11 +440,7 @@ fill: var(--color-primary-light);
   gap: 20px;
 }
 
-.footer-logo {
-  flex-grow: 1;
-
-}
-
+.footer-logo,
 .footer-menu {
   flex-grow: 1;
 }
@@ -423,11 +451,8 @@ fill: var(--color-primary-light);
   padding-top: 16px;
 }
 
-.address-list{
-  flex-grow: 1;
-}
-
-.address-info {
+.address-list,
+.address-info{
   flex-grow: 1;
 }
 
@@ -453,4 +478,37 @@ fill: var(--color-primary-light);
 }
 .address-icon:hover {
   fill: var(--color-brand-light);
+}
+
+/* Modal */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  width: 880px;
+  height: 880px;
+  background-color: var(--color-primary-light);
+  border-radius: 32px;
+  position: relative;
+}
+
+.modal-btn-close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
 }
