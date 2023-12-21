@@ -416,6 +416,8 @@ fill: var(--color-primary-light);
  border-radius: 16px;
 }
 
+
+
 /* footer */
 .footer {
   background-color: var(--color-primary-dark);
@@ -532,10 +534,65 @@ fill: var(--color-primary-light);
   background-color: var(--color-primary-light);
   border-radius: 32px;
   position: relative;
+  padding: 128px;
 }
 
 .modal-btn-close {
   position: absolute;
   top: 40px;
   right: 40px;
+}
+
+
+/* Contact-form */
+.contact-form-title {
+  font-size: 64px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.contact-form-comment {
+  color: var(--color-brand-dark);
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.contact-input {
+  width: 605px;
+  height: 55px;
+  margin-bottom: 32px;
+  padding: 16px 42px;
+  background: transparent;
+  border-radius: 17px;
+  border: 1px solid var(--color-secondary-dark);
+}
+
+.contact-input::placeholder{
+  color: var(--color-secondary-dark);
+}
+
+.contact-input:focus {
+  outline: none;
+  border: 2px solid var(--color-brand-light);
+}
+
+
+.contact-form-button {
+  display: block;
+  margin: 0 auto 24px ;
+}
+
+.form-terms {
+  margin: 0 auto;
+  max-width: 210px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.form-terms-link {
+  color:var(--color-primary-dark);
+  text-decoration: underline var(--color-secondary-dark);
+  text-underline-offset: 2px;
 }
