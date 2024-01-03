@@ -1,23 +1,21 @@
-.hero-section {
+.hero-section{
+  padding: 272px 0;
   background-image: linear-gradient(
-    103deg, rgba(18, 18, 17, 0.78) 2.03%,
-    rgba(18, 18, 17, 0.60) 58.46%,
-    rgba(18, 18, 17, 0.00) 90.36%),
+      102.76deg,
+      rgba(18, 18, 17, 0.78) 2.03%,
+      rgba(18, 18, 17, 0.60) 58.46%,
+      rgba(18, 18, 17, 0.00) 90.36%
+    ),
     url(/images/hero-section-background.jpg);
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
-}
 
-.hero-title {
-  margin-top: 272px;
-  margin-bottom: 272px;
-  color: var(--color-primary-light);
-  font-size: 128px;
-  font-weight: 900;
-  text-align: center;
-}
-
-.hero-title .accent {
-  color: var(--color-brand-light);
+  &__title {
+    margin-bottom: 0;
+    color: var(--color-primary-light);
+    text-align: center;
+    font-size: 128px;
+    font-weight: 900;
+  }
 }

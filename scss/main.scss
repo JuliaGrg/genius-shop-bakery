@@ -3,9 +3,14 @@
 @import './utils/variables';
 @import './base';
 @import "./utils/utils";
+@import './utils/texts';
 
 @import './components/buttons';
 @import './components/caurousel-button';
+@import './components/chef-card';
+@import './components/form-terms';
+@import './components/format-card.scss';
+@import './components/input';
 @import './components/links';
 
 @import './layouts/advantages-section';
@@ -14,7 +19,6 @@
 @import './layouts/container';
 @import './layouts/footer';
 @import './layouts/formats-section';
-@import './layouts/forms';
 @import './layouts/header';
 @import './layouts/hero-section';
 @import './layouts/modal';

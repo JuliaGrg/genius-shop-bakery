@@ -8,9 +8,10 @@
   font-weight: 600;
   transition: color 0.3s;
   transition: background-color 0.3s;
+
+  &:hover {
+    background-color: transparent;
+    color: var(--color-brand-dark);
+  }
 }
 
-.button:hover {
-  background-color: transparent;
-  color: var(--color-brand-dark);
-}
