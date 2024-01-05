@@ -1,18 +1,24 @@
 .footer {
-  background-color: var(--color-primary-dark);
-  background-image: url(/images/footer-background.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding: 32px 0;
-  position: relative;
+    text-align: center;
+    background-color: var(--color-primary-dark);
+    background-image: url(/images/footer-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 32px 0;
+    position: relative;
+    z-index: -2;
+
+    @media screen and (min-width: $bp-desktop) {
+      text-align: left;
+    }
 
   &::before,
   &::after {
-  position: absolute;
-  background-repeat: no-repeat;
-  bottom: 0;
-  content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    bottom: 0;
+    content: '';
   } 
 
   &::before {
@@ -27,36 +33,48 @@
     width: 380px;
     height: 190px;
     right: 0;
+    z-index: -1;
   }
 
   &__container {
     display: flex;
-    flex-basis: 50%;
+    flex-direction: column;
     gap: 20px;
+
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+      flex-basis: 50%;
+    }
   }
 
   &__nav,
   &__address {
-  flex-basis: 50%;
-  display: flex;
-  gap: 20px;
-  }
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    line-height: 2;
 
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+      flex-basis: 50%;
+    }
+  }
 
   &__logo,
   &__menu {
-  flex-grow: 1;
+    flex-grow: 1;
   }
 
   &__address-icons {
-  display: flex;
-  gap: 22px;
-  padding-top: 16px;
+    display: flex;
+    gap: 22px;
+    padding-top: 16px;
+    justify-content: center;
   }
 
   &__address-list,
   &__address-info{
-  flex-grow: 1;
+    flex-grow: 1;
   }
 
   &__address-link {
@@ -64,6 +82,7 @@
     font-size: 16px;
     font-weight: 300;
     text-decoration: none;
+    
 
     &:hover {
       color: var(--color-brand-light);
@@ -83,4 +102,8 @@
       fill: var(--color-brand-light);
     }
   }
+}
+
+@media screen and (min-width: $bp-desktop) {
+  
 }
