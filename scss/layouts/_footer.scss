@@ -1,7 +1,7 @@
 .footer {
     text-align: center;
     background-color: var(--color-primary-dark);
-    background-image: url(/images/footer-background.png);
+    background-image: url(../images/footer-background.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -21,14 +21,14 @@
   } 
 
   &::before {
-    background-image: url(/images/decor-bread-left.png);
+    background-image: url(../images/decor-bread-left.png);
     width: 180px;
     height: 120px;
     left: 0;
   }
   
   &::after {
-    background-image: url(/images/bread-decor-right.png);
+    background-image: url(../images/bread-decor-right.png);
     width: 380px;
     height: 190px;
     right: 0;
